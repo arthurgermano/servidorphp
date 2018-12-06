@@ -9,6 +9,9 @@ RUN apt-get -y install apache2 php5 libapache2-mod-php5 php5-dev php-pear php5-c
 
 # Install PostgreSQL Client / MYSQL Client / Several libraries PHP / MSSQL Client
 RUN apt-get -y install php5-pgsql php5-mysql php5-apcu php5-gd php5-json php5-ldap php5-mcrypt php5-sqlite php5-xsl php5-redis php5-mssql git
+
+# Adding MCRYPT configuration
+RUN echo "extension=mcrypt.so" > /etc/php5/apache2/conf.d/20-mcrypt.ini
  
 # Install the Oracle Instant Client
 ADD oracle/oracle-instantclient11.2-basiclite_11.2.0.4.0-2_amd64.deb /tmp
