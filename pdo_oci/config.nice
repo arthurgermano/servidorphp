@@ -1,0 +1,7 @@
+#! /bin/sh
+#
+# Created by configure
+
+'./configure' \
+'--with-pdo-oci=instantclient,/usr/local/lib/instantclient_11_2,11.1' \
+"$@"
