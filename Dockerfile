@@ -26,7 +26,7 @@ ENV LD_LIBRARY_PATH /usr/lib/oracle/11.2/client64/lib/
 ENV ORACLE_HOME /usr/lib/oracle/11.2/client64/lib/
 
 # Adding PEAR Proxy
-RUN pear config-set http_proxy http://localhost:8118
+# RUN pear config-set http_proxy http://localhost:8118
 
 # Install the OCI8 PHP extension
 RUN echo 'instantclient,/usr/lib/oracle/11.2/client64/lib' | pecl install -f oci8-2.0.8
